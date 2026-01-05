@@ -777,15 +777,15 @@ int WindowHelper::titleHeight() const {
 bool WindowHelper::nativeResize() const {
 	Expects(window()->windowHandle() != nullptr);
 
-	if (::Platform::IsWindows11OrGreater()) {
-		switch (window()->windowHandle()->surfaceType()) {
-		case QSurface::RasterSurface:
-		case QSurface::RasterGLSurface:
-			return window()->windowHandle()->format().alphaBufferSize() <= 0;
-		}
+	// if (::Platform::IsWindows11OrGreater()) {
+	// 	switch (window()->windowHandle()->surfaceType()) {
+	// 	case QSurface::RasterSurface:
+	// 	case QSurface::RasterGLSurface:
+	// 		return window()->windowHandle()->format().alphaBufferSize() <= 0;
+	// 	}
 
-		return true;
-	}
+	// 	return true;
+	// }
 
 	return false;
 }
